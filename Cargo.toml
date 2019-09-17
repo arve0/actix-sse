@@ -1,0 +1,10 @@
+[package]
+name = "actix-sse"
+version = "0.1.0"
+authors = ["arve"]
+edition = "2018"
+
+[dependencies]
+actix-web = "1.0"
+futures = "0.1"
+tokio = "0.1"
