@@ -29,3 +29,12 @@ You may be limited to a maximal number of connections (open file descriptors). S
 ```sh
 ulimit -n 2048
 ```
+
+Test maximum number of open connections with [src/drain.js](src/drain.js):
+
+```sh
+$ node src/drain.js
+Connections dropped: 5957, accepting connections: false^C⏎
+```
+
+_Accepting connections_ indicates wheter resources for the server have been exhausted.
