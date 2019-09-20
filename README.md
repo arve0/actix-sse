@@ -14,12 +14,12 @@ curl localhost:8080/broadcast/my_message
 *my_message* should appear in the browser with a timestamp.
 
 ## Performance
-This implementation serve thousand of clients on a 2013 macbook air without problem.
+This implementation serve thousand of clients on a 2013 macbook air without problems.
 
-Run [src/bench.js](src/bench.js) to benchmark your own system:
+Run [benchmark.js](benchmark.js) to benchmark your own system:
 
 ```sh
-$ node src/bench.js
+$ node benchmark.js
 Connected: 1000, connection time: 867 ms, total broadcast time: 23 ms^C⏎
 ```
 
@@ -30,10 +30,10 @@ You may be limited to a maximal number of connections (open file descriptors). S
 ulimit -n 2048
 ```
 
-Test maximum number of open connections with [src/drain.js](src/drain.js):
+Test maximum number of open connections with [drain.js](drain.js):
 
 ```sh
-$ node src/drain.js
+$ node drain.js
 Connections dropped: 5957, accepting connections: false^C⏎
 ```
 
